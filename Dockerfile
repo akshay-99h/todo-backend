@@ -18,4 +18,11 @@ RUN npm install
 # first dot is for copying from directory and second is for copying to
 COPY . .
 
+# installing pm2 that is used in production envs to ensure that an app does not crash 
+# while in prod as in case of npm
 RUN npm install -g pm2
+
+# exposiong the port
+EXPOSE 3000
+
+CMD ["pm2-runtime","index.js"]
