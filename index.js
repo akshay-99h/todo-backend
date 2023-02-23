@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (request, response) => {
-    return response.send('Hello World!');
+    return response.send('Hey totally random person! Go to /todos to check the todolist and to /todo to update it.');
 })
 
 app.get('/todos', (request, response) => {
